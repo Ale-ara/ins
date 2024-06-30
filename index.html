@@ -309,35 +309,41 @@
         transform: translateY(0);
       }
 
-      /* Media Queries para responsividade */
       @media (max-width: 768px) {
         .buttons {
           flex-direction: column;
           align-items: center;
-          width: 100%;
-          margin-left: 0;
+        }
+
+        .nav-arrow {
+          font-size: 1.5rem;
         }
 
         .button {
           margin: 10px 0;
           width: 80%;
+          max-width: 200px;
         }
 
-        .logo {
-          max-width: 280px;
+        .form-container input,
+        .form-container select,
+        .form-container textarea {
+          height: 50px;
+          font-size: 14px;
+        }
+
+        .form-container button {
+          height: 50px;
+          font-size: 14px;
+        }
+
+        .credits {
+          padding: 10px;
+          font-size: 12px;
         }
       }
 
       @media (max-width: 480px) {
-        .container {
-          padding: 0 10px;
-        }
-
-        .button {
-          height: 70px;
-          font-size: 14px;
-        }
-
         .nav-arrow {
           font-size: 1.5rem;
         }
@@ -360,6 +366,7 @@
         }
       }
     </style>
+
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
       type="text/javascript"
