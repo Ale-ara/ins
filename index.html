@@ -148,12 +148,18 @@ body {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.5s ease;
+  position: absolute; /* Alterado para posição absoluta */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translate(-50%, -50%); /* Centraliza o formulário */
+  width: 90%; /* Largura ajustada */
+  max-width: 400px; /* Largura máxima */
 }
 
 .form-container.active {
   display: block;
   opacity: 1;
-  transform: translateY(0);
+  z-index: 3; /* Garante que o formulário ativo esteja acima dos botões */
 }
 
 .form-container form {
@@ -325,8 +331,12 @@ body {
     margin-left: 5px; /* Ajuste o espaço do ícone de navegação à direita */
     z-index: 3; /* Garantir que o ícone esteja acima dos botões */
   }
-}
 
+  .form-container {
+    width: 90%; /* Reduz a largura do form-container */
+    max-width: 300px; /* Ajusta a largura máxima do form-container */
+  }
+}
     </style>
 
     <script
