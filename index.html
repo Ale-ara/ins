@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[PROF] Requerimentos</title>
+    <title>[INS] Requerimentos</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="https://i.imgur.com/WEaVrCr.gif" />
+    <link rel="icon" href="https://www.habbo.com.br/habbo-imaging/badge/b09064s43131s50134s17113s171153f3edc7f555be912c2392e285b05bd34.gif" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -16,7 +16,7 @@
     <style>
       html {
         height: 100%;
-        background: linear-gradient(90deg, #380c3c, #bf74c7);
+        background: linear-gradient(90deg, #005dad, #196DB5);
         background-size: 200% 200%;
         background-attachment: fixed;
         animation: gradientAnimation 15s ease infinite;
@@ -45,9 +45,7 @@
         min-height: 100vh;
         font-family: "Poppins", sans-serif;
         overflow-y: auto;
-        /* Permitir scroll na tela */
         background: transparent;
-        /* Tornar o fundo do body transparente para o gradiente do html aparecer */
       }
 
       .container {
@@ -76,7 +74,6 @@
       .buttons {
         display: flex;
         align-items: center;
-        /* Centraliza verticalmente os itens */
         justify-content: center;
         position: relative;
         overflow: hidden;
@@ -113,7 +110,7 @@
         margin: 0 5px;
         padding: 10px 0;
         background-color: white;
-        color: #5d1464;
+        color: #005dad;
         border: none;
         cursor: pointer;
         transition: background-color 0.3s;
@@ -134,40 +131,6 @@
         height: 1.15rem;
         width: auto;
       }
-
-      /* .buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: -70px;
-    z-index: 1;
-    position: relative;
-}
-
-.button {
-    flex: 1;
-    margin: 0 5px;
-    padding: 10px 0;
-    background-color: white;
-    color: #5D1464;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 1.15rem;
-    height: 90px;
-    z-index: 2;
-    position: relative;
-    font-weight: 800;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.button .icon {
-    margin-right: 8px;
-    height: 1.25rem;
-    width: auto
-} */
 
       .button:hover {
         background-color: #f0f0f0;
@@ -229,7 +192,6 @@
         -moz-appearance: none;
         appearance: none;
         padding-right: 30px;
-        /* Espaço para a seta */
         background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
         background-repeat: no-repeat;
         background-position: right 10px center;
@@ -251,7 +213,7 @@
 
       .form-container button {
         height: 68px;
-        background-color: #511b62;
+        background-color: #005dad;
         color: white;
         border: none;
         border-radius: 15px;
@@ -262,7 +224,7 @@
       }
 
       .form-container button:hover {
-        background-color: #42104f;
+        background-color: #002545;
       }
 
       .form-container .row {
@@ -274,44 +236,27 @@
       .form-container .row select,
       .form-container .row textarea {
         width: calc(50% - 5px);
-        /* Ajustar a largura dos campos divididos */
       }
 
       body.scrollable .container {
         height: auto;
-        /* Garantir que o contêiner ocupe toda a altura necessária quando ativo */
         transform: translateY(10vh);
-        /* Subir o contêiner apenas até o limite da tela */
       }
 
-      /* body.scrollable .logo-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: 20px;
-} */
-
-      /* Estilização dos campos inválidos */
       input.invalid,
       select.invalid,
       textarea.invalid {
         border: 2px solid #d9534f;
-        /* Borda vermelha */
         background-color: #f2dede;
-        /* Fundo vermelho claro */
       }
 
       input.invalid:focus,
       select.invalid:focus,
       textarea.invalid:focus {
         border-color: #a94442;
-        /* Borda vermelha mais escura ao focar */
         outline: none;
-        /* Remover outline padrão */
       }
 
-      /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 12px;
       }
@@ -329,7 +274,6 @@
         background: #ad66b4;
       }
 
-      /* For Firefox */
       body {
         scrollbar-width: thin;
         scrollbar-color: #bf74c7 #300334;
@@ -363,6 +307,38 @@
       .credits.show {
         opacity: 1;
         transform: translateY(0);
+      }
+
+      /* Media Queries para responsividade */
+      @media (max-width: 768px) {
+        .buttons {
+          flex-direction: column;
+          width: 100%;
+          margin-left: 0;
+        }
+
+        .button {
+          margin: 10px 0;
+        }
+
+        .logo {
+          max-width: 280px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 0 10px;
+        }
+
+        .button {
+          height: 70px;
+          font-size: 14px;
+        }
+
+        .nav-arrow {
+          font-size: 1.5rem;
+        }
       }
     </style>
     <script
