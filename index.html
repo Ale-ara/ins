@@ -88,7 +88,7 @@ body {
   color: white;
   opacity: 0.9;
   cursor: pointer;
-  z-index: 2; /* Ajuste o z-index para garantir que o ícone esteja acima dos botões */
+  z-index: 2;
   transition: transform 0.3s;
 }
 
@@ -148,18 +148,12 @@ body {
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.5s ease;
-  position: absolute; /* Alterado para posição absoluta */
-  top: 50%; /* Centraliza verticalmente */
-  left: 50%; /* Centraliza horizontalmente */
-  transform: translate(-50%, -50%); /* Centraliza o formulário */
-  width: 90%; /* Largura ajustada */
-  max-width: 400px; /* Largura máxima */
 }
 
 .form-container.active {
   display: block;
   opacity: 1;
-  z-index: 3; /* Garante que o formulário ativo esteja acima dos botões */
+  transform: translateY(0);
 }
 
 .form-container form {
@@ -331,9 +325,8 @@ body {
     margin-left: 5px; /* Ajuste o espaço do ícone de navegação à direita */
     z-index: 3; /* Garantir que o ícone esteja acima dos botões */
   }
-
-
 }
+
     </style>
 
     <script
