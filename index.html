@@ -1,370 +1,372 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>[PROF] Requerimentos</title>
+    <title>[INS] Requerimentos</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="https://i.imgur.com/WEaVrCr.gif" />
+    <link rel="icon" href="https://www.habbo.com.br/habbo-imaging/badge/b09064s43131s50134s17113s171153f3edc7f555be912c2392e285b05bd34.gif" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <style>
-      html {
-        height: 100%;
-        background: linear-gradient(90deg, #380c3c, #bf74c7);
-        background-size: 200% 200%;
-        background-attachment: fixed;
-        animation: gradientAnimation 15s ease infinite;
-      }
+html {
+  height: 100%;
+  background: linear-gradient(90deg, #380c3c, #bf74c7);
+  background-size: 200% 200%;
+  background-attachment: fixed;
+  animation: gradientAnimation 15s ease infinite;
+}
 
-      @keyframes gradientAnimation {
-        0% {
-          background-position: 0% 50%;
-        }
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
 
-        50% {
-          background-position: 100% 50%;
-        }
+  50% {
+    background-position: 100% 50%;
+  }
 
-        100% {
-          background-position: 0% 50%;
-        }
-      }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-      body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        font-family: "Poppins", sans-serif;
-        overflow-y: auto;
-        /* Permitir scroll na tela */
-        background: transparent;
-        /* Tornar o fundo do body transparente para o gradiente do html aparecer */
-      }
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-y: auto;
+  background: transparent;
+}
 
-      .container {
-        width: 100%;
-        max-width: 800px;
-        text-align: center;
-        position: relative;
-        transition: transform 0.5s ease-in-out;
-      }
+.container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
 
-      .logo {
-        width: 100%;
-        max-width: 360px;
-        height: auto;
-        margin: 0 auto;
-        position: relative;
-        z-index: 0;
-        margin-top: -40px;
-      }
+.logo {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  margin-top: -40px;
+}
 
-      .logo-container {
-        position: relative;
-        display: inline-block;
-      }
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
 
-      .buttons {
-        display: flex;
-        align-items: center;
-        /* Centraliza verticalmente os itens */
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-        margin-top: -70px;
-        margin-left: -5%;
-        z-index: 1;
-        width: 110%;
-      }
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: -70px;
+  margin-left: -5%;
+  z-index: 1;
+  width: 110%;
+}
 
-      .nav-arrow {
-        font-size: 2rem;
-        color: white;
-        opacity: 0.9;
-        cursor: pointer;
-        z-index: 2;
-        transition: transform 0.3s;
-      }
+.nav-arrow {
+  font-size: 2rem;
+  color: white;
+  opacity: 0.9;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s;
+}
 
-      .nav-arrow:hover {
-        opacity: 1;
-        transform: scale(1.2);
-      }
+.nav-arrow:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
 
-      .nav-arrow.left {
-        margin-right: 10px;
-      }
+.nav-arrow.left {
+  margin-right: 10px;
+}
 
-      .nav-arrow.right {
-        margin-left: 10px;
-      }
-
-      .button {
-        flex: 1;
-        margin: 0 5px;
-        padding: 10px 0;
-        background-color: white;
-        color: #5d1464;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        border-radius: 1.15rem;
-        height: 90px;
-        z-index: 2;
-        position: relative;
-        font-weight: 800;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.1s ease;
-      }
-
-      .button .icon {
-        margin-right: 8px;
-        height: 1.15rem;
-        width: auto;
-      }
-
-      /* .buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: -70px;
-    z-index: 1;
-    position: relative;
+.nav-arrow.right {
+  margin-left: 10px;
 }
 
 .button {
-    flex: 1;
-    margin: 0 5px;
-    padding: 10px 0;
-    background-color: white;
-    color: #5D1464;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    border-radius: 1.15rem;
-    height: 90px;
-    z-index: 2;
+  flex: 1;
+  margin: 0 5px; /* Espaçamento entre botões */
+  padding: 10px 0;
+  background-color: white;
+  color: #005dad;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 1.15rem;
+  height: 90px;
+  z-index: 2;
+  position: relative;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+}
+
+.button .icon {
+  margin-right: 8px;
+  height: 1.15rem;
+  width: auto;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.01);
+}
+
+.form-container {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  padding: 20px;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+
+.form-container.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+  height: 62px;
+  background-color: #e7e7e7;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #282828;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #f26dff;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #282828;
+}
+
+.form-container select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+}
+
+.form-container .checkbox {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  font-size: 14px;
+  color: #545353;
+}
+
+.form-container .checkbox input {
+  width: auto;
+  margin-right: 10px;
+}
+
+.form-container button {
+  height: 68px;
+  background-color: #005dad;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #002545;
+}
+
+.form-container .row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-container .row input,
+.form-container .row select,
+.form-container .row textarea {
+  width: calc(50% - 5px);
+}
+
+body.scrollable .container {
+  height: auto;
+  transform: translateY(10vh);
+}
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border: 2px solid #d9534f;
+  background-color: #f2dede;
+}
+
+input.invalid:focus,
+select.invalid:focus,
+textarea.invalid:focus {
+  border-color: #a94442;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #300334;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bf74c7;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ad66b4;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #bf74c7 #300334;
+}
+
+.credits {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #bf74c7;
+  font-size: 14px;
+  color: #ffffffc8;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease;
+}
+
+.credits p strong {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.credits i {
+  margin-right: 8px;
+}
+
+.credits .line-break {
+  display: block;
+  margin-top: -10px;
+}
+
+.credits.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+  body {
+    margin: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    overflow-y: auto;
+    background: transparent;
+  }
+  
+  .buttons {
+    height: auto;
     position: relative;
-    font-weight: 800;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  
+  .button {
+    width: calc(20% - 5px); /* Ajuste o tamanho dos botões para 90% da largura */
+    font-size: 60%;
+    margin: 2px;
+    padding: 2%;
+    flex: 1 1 15%; /* Altera para ocupar toda a largura em telas menores */
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button .icon {
+    margin-right: 10px;
+    height: 1.15rem;
+    width: auto;
+  }
+  .nav-arrow.right {
+    margin-right: 2.5rem; /* Ajuste o espaço do ícone de navegação à direita */
+    z-index: 3; /* Garantir que o ícone esteja acima dos botões */
+  }
+  
+  .nav-arrow.left {
+    margin-left: 2.5rem; /* Ajuste o espaço do ícone de navegação à esquerda */
+    z-index: 3; /* Garantir que o ícone esteja acima dos botões */
+  }
+  
+  .form-container {
+    margin-left: 0.5rem;
+  }
 }
-
-.button .icon {
-    margin-right: 8px;
-    height: 1.25rem;
-    width: auto
-} */
-
-      .button:hover {
-        background-color: #f0f0f0;
-        transform: scale(1.01);
-      }
-
-      .form-container {
-        display: none;
-        margin-top: 20px;
-        margin-bottom: 2rem;
-        padding: 20px;
-        background-color: white;
-        border-radius: 1rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        transform: translateY(50px);
-        transition: all 0.5s ease;
-      }
-
-      .form-container.active {
-        display: block;
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .form-container form {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .form-container input,
-      .form-container select,
-      .form-container textarea {
-        height: 62px;
-        background-color: #e7e7e7;
-        border: none;
-        border-radius: 10px;
-        padding: 10px;
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        color: #282828;
-        transition: border-color 0.3s ease;
-      }
-
-      .form-container input:focus,
-      .form-container select:focus,
-      .form-container textarea:focus {
-        border-color: #f26dff;
-      }
-
-      .form-container input::placeholder,
-      .form-container textarea::placeholder {
-        color: #282828;
-      }
-
-      .form-container select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        padding-right: 30px;
-        /* Espaço para a seta */
-        background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-        background-repeat: no-repeat;
-        background-position: right 10px center;
-        background-size: 16px 16px;
-      }
-
-      .form-container .checkbox {
-        display: flex;
-        align-items: center;
-        text-align: left;
-        font-size: 14px;
-        color: #545353;
-      }
-
-      .form-container .checkbox input {
-        width: auto;
-        margin-right: 10px;
-      }
-
-      .form-container button {
-        height: 68px;
-        background-color: #511b62;
-        color: white;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
-        transition: background-color 0.3s;
-      }
-
-      .form-container button:hover {
-        background-color: #42104f;
-      }
-
-      .form-container .row {
-        display: flex;
-        gap: 10px;
-      }
-
-      .form-container .row input,
-      .form-container .row select,
-      .form-container .row textarea {
-        width: calc(50% - 5px);
-        /* Ajustar a largura dos campos divididos */
-      }
-
-      body.scrollable .container {
-        height: auto;
-        /* Garantir que o contêiner ocupe toda a altura necessária quando ativo */
-        transform: translateY(10vh);
-        /* Subir o contêiner apenas até o limite da tela */
-      }
-
-      /* body.scrollable .logo-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin-top: 20px;
-} */
-
-      /* Estilização dos campos inválidos */
-      input.invalid,
-      select.invalid,
-      textarea.invalid {
-        border: 2px solid #d9534f;
-        /* Borda vermelha */
-        background-color: #f2dede;
-        /* Fundo vermelho claro */
-      }
-
-      input.invalid:focus,
-      select.invalid:focus,
-      textarea.invalid:focus {
-        border-color: #a94442;
-        /* Borda vermelha mais escura ao focar */
-        outline: none;
-        /* Remover outline padrão */
-      }
-
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 12px;
-      }
-
-      ::-webkit-scrollbar-track {
-        background: #300334;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: #bf74c7;
-        border-radius: 10px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: #ad66b4;
-      }
-
-      /* For Firefox */
-      body {
-        scrollbar-width: thin;
-        scrollbar-color: #bf74c7 #300334;
-      }
-
-      .credits {
-        text-align: center;
-        margin-top: 40px;
-        padding: 20px;
-        border-top: 1px solid #bf74c7;
-        font-size: 14px;
-        color: #ffffffc8;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 1s ease;
-      }
-
-      .credits p strong {
-        color: rgba(255, 255, 255, 0.95);
-      }
-
-      .credits i {
-        margin-right: 8px;
-      }
-
-      .credits .line-break {
-        display: block;
-        margin-top: -10px;
-      }
-
-      .credits.show {
-        opacity: 1;
-        transform: translateY(0);
-      }
     </style>
+
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
       type="text/javascript"
@@ -604,7 +606,7 @@
             <input type="checkbox" id="termos" required />
             <label for="termos"
               >Li e concordo com as normas de saída, sendo que caso o meu tempo
-              na companhia seja inferior a 30 dias e superior a 7 dias,
+              na companhia seja inferior a 30 dias e superior a 14 dias,
               receberei 50 medalhas efetivas negativas por saída precoce.</label
             >
           </div>
@@ -692,7 +694,7 @@
 
       <div id="form12" class="form-container">
         <form id="attlist_postagem">
-            <input id="attlist_tag" name="attlist_tag" type="text" placeholder="TAG do atualizador responsável. Ex: Qox" required>
+            <input id="attlist_tag" name="attlist_tag" type="text" placeholder="TAG do atualizador responsável. Ex.: Qox" required>
             <input id="fa-generated-message" name="fa-generated-message" type="hidden">
             <button id="enviar_attlist" type="submit">Enviar</button>
         </form>
@@ -701,7 +703,7 @@
       <div class="credits">
         <p>
           <i class="fas fa-code"></i> Desenvolvimento:
-          <strong>mitojmcam e Qox</strong> | <i class="fas fa-palette"></i> Design:
+          <strong>mitojmcam</strong> | <i class="fas fa-palette"></i> Design:
           <strong>.Brendon</strong>
         </p>
         <p class="line-break">
